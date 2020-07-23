@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 
 public class UIControl : UIBehaviour
 {
+    const string VERSION = "v1.0.1";
     static Text m_message;
-    
+
     [SerializeField] Button m_btnNext;
     public static event Action OnNextHandler;
   
@@ -16,8 +17,11 @@ public class UIControl : UIBehaviour
     [SerializeField] Button m_btnRotate;
     public static event Action OnRotateHandler;
 
+    [SerializeField] Text m_txtVersion;
+
     protected override void Awake()
     {
+        m_txtVersion.text = VERSION;
         m_message = transform.Find("Control/txtMessage").GetComponent<Text>();
         m_btnNext.onClick.AddListener(()=>{ OnNextHandler.Invoke(); });
         m_btnPre.onClick.AddListener(()=>{ OnPreviousHandler.Invoke(); });

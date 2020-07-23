@@ -1,6 +1,7 @@
 ﻿{
     "files.autoSave": "onFocusChange",
     "editor.formatOnSave": false,
+    "editor.tabSize": 4,
     "files.exclude":
     {
         "**/.DS_Store":true,
