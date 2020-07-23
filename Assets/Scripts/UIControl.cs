@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 public class UIControl : UIBehaviour
 {
     static Text m_message;
-
+    
     [SerializeField] Button m_btnNext;
     public static event Action OnNextHandler;
-
+  
     [SerializeField] Button m_btnPre;
     public static event Action OnPreviousHandler;
 
